@@ -1,0 +1,20 @@
+<article>
+    <p [style.color]="cor" (click)="getCor()">
+        {{ textoSelecionado }}
+    </p>
+</article>
+
+<article>
+    <h1>Selecione um texto:</h1>
+    <select (change)="mudaTexto($event)">
+        <option value="Texto 1">Texto 1</option>
+        <option value="Texto 2">Texto 2</option>
+        <option value="Texto 3">Texto 3</option>
+        <option value="Texto 4">Texto 4</option>
+    </select>
+
+    <div *ngIf="textoSelecionado === 'Texto 1'">Texto 1: Este é o texto da opção 1.</div>
+    <div *ngIf="textoSelecionado === 'Texto 2'">Texto 2: Este é o texto da opção 2.</div>
+    <div *ngIf="textoSelecionado === 'Texto 3'">Texto 3: Este é o texto da opção 3.</div>
+    <div *ngIf="textoSelecionado === 'Texto 4'">Texto 4: Este é o texto da opção 4.</div>
+</article>
